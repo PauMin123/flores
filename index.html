@@ -15,7 +15,21 @@
 <body>
 
     <div class="Contenedor-Binicio">
-        <button class="Button" id="BVer"> Click aqui </button>
+        <button class="Button" onclick="playAudio()" id="BVer"> Click aqui </button>
+
+        <audio id="miAudio" src="Cuco - Piel Canela (Audio).mp3"></audio>
+        
+        <script>
+        function playAudio() {
+          var audio = document.getElementById("miAudio");
+          if (audio.paused) {
+            audio.play();
+          } else {
+            audio.pause();
+            audio.currentTime = 0;
+          }
+        }
+        </script>
     </div>
 
     <div class="Con-Emergente">
